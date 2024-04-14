@@ -19,7 +19,7 @@ def solution(today, terms, privacies):
         target_y = y
         target_m = m+terms_dict[key]
         target_d = d-1
-        # 25 -> 2y, 1m
+
         while target_m > 12:
             target_m -= 12
             target_y += 1
