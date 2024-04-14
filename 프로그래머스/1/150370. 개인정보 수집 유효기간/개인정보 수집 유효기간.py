@@ -2,13 +2,12 @@ def solution(today, terms, privacies):
     answer = []
     # today
     year, month, day = [int(item) for item in today.split('.')]
-    print('today:',year,month,day)
+
     # terms
     terms_dict = {}
     for term in terms:
         key, value = term.split(' ')
         terms_dict[key] = int(value) 
-    print(terms_dict)
     
     # privacies
     idx = 0
@@ -44,7 +43,5 @@ def solution(today, terms, privacies):
                 answer.append(idx)       
         else:
             answer.append(idx)
-        
-        print(target_y, target_m, target_d)
-    print(answer)
+            
     return answer
