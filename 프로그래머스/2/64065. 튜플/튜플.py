@@ -4,11 +4,13 @@ def solution(s):
     s = s.replace('{', '[')
     s = s.replace('}', ']')
     s = s.replace(',[', '[')
-
+    print(s)
     initial = []
     initial_dict = {}
+    idx = -1
     for item in s[1:-1]:
         if item == '[':
+            idx +=1 
             check = []
             target_str = ''
         elif (item != ',' and item != "]"):
@@ -19,14 +21,9 @@ def solution(s):
         elif item == ']':
             check.append(int(target_str))
             initial.append(check)
-            initial_dict[len(check)] = check
+            initial_dict[idx] = len(check)
             target_str = ''
-    
-    for i in range(1, len(initial_dict.keys())+1):
-        for value in initial_dict[i]:
-            if not (value in answer):
-                answer.extend([value])
-            else:
-                pass
-
+            
+    print(initial)
+    print(initial_dict)
     return answer
