@@ -8,8 +8,7 @@ def solution(record):
     
     for rec in record:
         split_rec = rec.split(' ')
-        
-        if (split_rec[0] == 'Enter' or split_rec[0] == 'Leave'):
+        if split_rec[0] in ['Enter', 'Leave']:
             answer_record.append(rec)
         # setting_user
         if split_rec[0] == 'Leave':
