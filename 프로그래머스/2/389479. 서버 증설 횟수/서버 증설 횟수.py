@@ -13,7 +13,7 @@ def solution(players, m, k):
             target_add = check - server_list[idx]
             answer += target_add
             for i in range(k):     
-                if idx+i <24:
+                if idx+i < 24:
                     server_list[idx+i] += target_add
                 else: 
                     pass     
