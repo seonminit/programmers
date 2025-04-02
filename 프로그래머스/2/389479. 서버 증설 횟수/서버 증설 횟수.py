@@ -6,9 +6,9 @@ def solution(players, m, k):
         player = players[idx]
         check = player // m
         if check == 0:
-            pass
+            continue
         elif (check >= 1) and (check <= server_list[idx]):
-            pass
+            continue
         elif (check >= 1) and (check > server_list[idx]):
             target_add = check - server_list[idx]
             answer += target_add
@@ -16,6 +16,6 @@ def solution(players, m, k):
                 if idx+i < 24:
                     server_list[idx+i] += target_add
                 else: 
-                    pass     
+                    break     
             
     return answer
